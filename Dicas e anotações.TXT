@@ -1,0 +1,104 @@
+codigo html
+
+<html>
+
+<head>
+  <title>
+    Imersão Dev - Aula 03
+  </title>
+</head>
+
+<body>
+   
+  <div class="container">
+    <h1 class="page-title">
+      Mentalista
+    </h1>
+    <p class="page-subtitle">
+      Digite um número de 0 a 10.
+      Você tem 3 tentativas
+    </p>
+    <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-mentalista.svg" class="page-logo" alt="">
+  </div>
+  <a href="https://alura.com.br/" target="_blank">
+    <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
+  </a>
+</body>
+
+</html>
+
+
+css
+
+body {
+  font-family: "Roboto Mono", monospace;
+  min-height: 600px;
+  background-image: url(https://images.wallpapersden.com/image/download/doctor-who_a2xsbG2UmZqaraWkpJRmbmdlrWZlbWU.jpg);
+  background-color: #000000;
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+  height: 100vh;
+}
+
+.page-title {
+  color: #ffffff;
+  margin: 0 0 5px;
+}
+
+.page-subtitle {
+  color: #ffffff;
+  margin-top: 100px;
+}
+
+.page-logo {
+  width: 15px;
+}
+
+.alura-logo {
+  width: 40px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+@media (max-height: 500px) {
+  body {
+    min-height: 800px;
+  }
+}
+
+
+codigo js
+
+var numeroSecreto = parseInt(Math.random() * 10);
+var tentativas = 3;
+
+while (tentativas > 0) {
+  var chute = parseInt(prompt("Digite um número entre 0 e 10"));
+  
+  if (numeroSecreto == chute) {
+    alert(" Acertou! ");
+    break;
+  } else if (chute > numeroSecreto) {
+    alert("O número secreto é menor");
+    tentativas = tentativas - 1;
+  } else if (chute < numeroSecreto) {
+    alert(" O número secreto é maior");
+    tentativas = tentativas - 1;
+  }
+}
+
+if (chute != numeroSecreto) {
+    alert("Suas tentativas acabaram. O número era"  +  numeroSecreto);
+  }
+
+***COLE NO SEU CODE PEN***
+
+SE DESEJAR TREINAR CRIAR COMMIT, FAÇA NO SEU EDITOR FAVORITO (USO O VS CODE)
+CRIE UMA PASTA,ABRA UMA ABA PARA CADA LINGUAGEM E FAÇA SEU COMMIT COM O GIT PARA SEU GITHUB 
